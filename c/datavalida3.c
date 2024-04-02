@@ -1,3 +1,8 @@
+// Nome: Erick Martins SIlva
+// Instituição: Cefet/RJ
+// Período: 1
+// Descrição: O programa obtém uma data na forma de um número inteiro de 8 algarismos (DDMMAAAA), valida ela e retorna o resultado para o usuário final
+
 #include <stdio.h>
 
 int anoBissexto (int data)
