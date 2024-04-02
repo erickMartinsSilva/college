@@ -1,7 +1,7 @@
 // Nome: Erick Martins Silva
-// Data: 05/03/24
-// Instituição: CEFET/RJ
-// Descrição: O programa abaixo calcula o imposto de renda de uma pessoa física com base no salário bruto dela
+// Instituição: Cefet/RJ
+// Período: 1
+// Descrição: O programa calcula o imposto de renda de uma pessoa física com base no salário bruto dela
 
 #include <stdio.h>
 
