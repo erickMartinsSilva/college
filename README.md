@@ -1,7 +1,7 @@
-Welcome! This is my first repository in GitHub.
+Olá! Este é o meu primeiro repositório no GitHub.
 
-The purpose of this repository is to store code related to my Computer Science studies not only at college, but from external courses as well.
-This repository so far contains codes for the following programming languages:
+Neste repositório está contido a maioria se não todos os códigos que eu escrevi durante meus estudos em Ciência da Computação, tanto na faculdade quando por fora.
+No momento, este repositório contém códigos das seguintes linguagens de programação:
 - C
 
-The list will grow in time as I learn new programming languages. 
+A lista aumentará conforme eu aprender mais linguagens.
