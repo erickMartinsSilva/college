@@ -1,7 +1,4 @@
-// Nome: Erick Martins Silva
-// Data: 05/03/24
-// Instituição: CEFET/RJ
-// Descrição: O programa abaixo informa para o usuário o número de parlamentares de determinado estado com base no número de cidadãos do mesmo
+// O programa informa ao usuário o número máximo de deputados por UF com base em certos parâmetros
 
 #include <stdio.h>
 

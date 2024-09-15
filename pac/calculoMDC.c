@@ -1,7 +1,4 @@
-// Nome: Erick Martins Silva
-// Instituição: Cefet/RJ
-// Período: 1
-// Descrição: O programa obtém dois números inseridos pelo usuário final e calcula o MDC entre eles enquanto explica passo a passo o Algoritmo de Euclides
+// O programa calcula o MDC entre dois números por meio do algoritmo de Euclides
 
 #include <stdio.h>
 

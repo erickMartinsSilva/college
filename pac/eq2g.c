@@ -1,7 +1,5 @@
-// Nome: Erick Martins Silva
-// Instituição: Cefet/RJ
-// Período: 1
-// Descrição: O programa abaixo resolve uma equação do segundo grau utilizando a fórmula de Bhaskara
+// O programa resolve uma equação do segundo grau, com base em três números, por meio da fórmula de Bhaskara
+
 #include <stdio.h>
 #include <math.h>
 

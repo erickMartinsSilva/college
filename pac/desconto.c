@@ -1,7 +1,4 @@
-// Nome: Erick Martins Silva
-// Instituição: Cefet/RJ
-// Período: 1
-// Descrição: O programa obtém o valor total das compras de um usuário final e, com base no valor, calcula o valor descontado das compras e o valor final com o desconto
+// O programa, com base em algumas condições, exibe o valor total das compras de um usuário e o desconto sobre elas
 
 #include <stdio.h>
 

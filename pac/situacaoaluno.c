@@ -1,6 +1,4 @@
-// NOME: Erick Martins Silva
-// DATA: 09/03/2024
-// DESCRICAO: O programa, com base na média das notas de duas provas, verifica se o aluno está aprovado, de prova final ou reprovado
+// O programa determina a situação final do aluno com base na média entre duas provas
 
 #include <stdio.h>
 

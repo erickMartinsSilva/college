@@ -1,7 +1,4 @@
-// Nome: Erick Martins SIlva
-// Instituição: Cefet/RJ
-// Período: 1
-// Descrição: O programa obtém uma data na forma de um número inteiro de 8 algarismos (DDMMAAAA), valida ela e retorna o resultado para o usuário final
+// O programa retorna uma data (válida ou não) com base num número de 8 algarismos informado pelo usuário
 
 #include <stdio.h>
 
