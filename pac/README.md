@@ -1,0 +1,1 @@
+Esta pasta contém a resolução de exercícios feitas por mim durante a disciplina de Projeto de Algoritmos Computacionais na faculdade.
