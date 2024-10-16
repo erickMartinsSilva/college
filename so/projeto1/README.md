@@ -1,4 +1,4 @@
-Neste projeto, os integrantes devem desenvolver programas em C que realizam as seguintes tarefas:
+Neste projeto, os integrantes do grupo devem desenvolver programas em C que realizam as seguintes tarefas:
 
 - wcat: exibir o conteúdo de um arquivo de texto no terminal;
 - wgrep: exibir apenas o conteúdo que tiver uma string específica de um arquivo de texto no terminal;
