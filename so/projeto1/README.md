@@ -1,6 +1,6 @@
-Neste projeto, os integrantes do grupo devem desenvolver programas em C que realizam as seguintes tarefas:
+Neste projeto, os integrantes do grupo devem desenvolver variações simplificadas de comandos UNIX em C:
 
 - wcat: exibir o conteúdo de um arquivo de texto no terminal;
-- wgrep: exibir apenas o conteúdo que tiver uma string específica de um arquivo de texto no terminal;
+- wgrep: exibir no terminal as linhas de um arquivo de texto que possuam uma cadeia específica de caracteres;
 - wzip: comprimir o conteúdo de um arquivo de texto (ex.: aaaaabb -> 5a2b);
-- wunzip: descomrpimri o conteúdo de um arquivo de texto (ex.: 5a2b -> aaaaabb).
+- wunzip: descomprimir o conteúdo de um arquivo de texto (ex.: 5a2b -> aaaaabb).
