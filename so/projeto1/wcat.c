@@ -4,8 +4,7 @@ int main(int argc, char *argv[]) {
     char buffer[100];
     FILE *arquivo;
     if(argc == 1) {
-        printf("Uso: ./wcat <nome_do_arquivo>");
-        return 1;
+        return 0;
     }
     else {
         for(int i = 1; i < argc; i++) {
