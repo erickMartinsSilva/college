@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    char buffer[100];
+    char linha[100];
     FILE *arquivo;
     if(argc == 1) {
         return 0;
@@ -14,8 +14,8 @@ int main(int argc, char *argv[]) {
                 return 1;
             }
             else {
-                while(fgets(buffer, sizeof(buffer), arquivo) != NULL) {
-                    printf("%s", buffer);
+                while(fgets(linha, sizeof(linha), arquivo) != NULL) {
+                    printf("%s", linha);
                 }
                 printf("\n");
             }
