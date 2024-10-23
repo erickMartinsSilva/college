@@ -1,1 +1,1 @@
-Esta pasta contém exercícios feitos por mim durante a disciplina de Estrutura de Dados que tive na faculdade.
+Exercícios resolvidos da disciplina de Estruturas de Dados e Algoritmos
