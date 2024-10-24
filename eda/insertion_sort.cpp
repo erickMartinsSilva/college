@@ -1,3 +1,4 @@
+// O programa ordena o array de cinco elementos [3, 5, 1, 4, 2] em ordem crescente utilizando do algoritmo de Insertion Sort
 #include <iostream>
 
 using namespace std;
