@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#define SIZE 5
+#define SIZE 15
 
 using namespace std;
 
