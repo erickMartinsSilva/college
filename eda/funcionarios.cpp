@@ -1,4 +1,4 @@
-// O código, após obter matrícula e salário de 15 funcionários, lista um relatório em ordem decrescente, a soma salarial, a média salarial e quais e quantos funcionários recebem um salário abaixo da média
+// O código lê matrícula e salário de 15 funcionários, exibe um relatório em ordem decrescente de salário e exibe informações como a soma salarial, média salarial e quais e quantos funcionários recebem menos que a média
 
 #include <iostream>
 
