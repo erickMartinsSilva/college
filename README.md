@@ -1,1 +1,1 @@
-Pasta com a resolução de exercícios de programação de diversas matérias que escrevi durante minha formação acadêmica de Bacharel em Ciência da Computação no Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ).
+Pasta com a resolução de exercícios de programação de diversas matérias que resolvi durante minha formação acadêmica de Bacharel em Ciência da Computação no Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ).
