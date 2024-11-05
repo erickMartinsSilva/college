@@ -1,0 +1,1 @@
+Neste projeto, os integrantes do grupo devem desenvolver um simples interpretador de comandos shell. Mais instruções estão disponíveis neste link: https://github.com/igorcompuff/ostep-projects/tree/master/processes-shell
