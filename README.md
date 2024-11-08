@@ -1,1 +1,1 @@
-Este repositório contém resoluções de diversos exercícios de programação que fiz durante a minha formação acadêmica pelo Cefet/RJ. O nome das pastas se refere a matéria que o exercício faz parte.
+Pasta com a resolução de exercícios de programação de diversas matérias que resolvi durante minha formação acadêmica de Bacharel em Ciência da Computação no Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ).
