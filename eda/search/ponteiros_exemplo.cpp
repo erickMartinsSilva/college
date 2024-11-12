@@ -1,3 +1,4 @@
+// Exemplo do funcionamento de um ponteiro e suas possíveis saídas
 #include <iostream>
 
 using namespace std;

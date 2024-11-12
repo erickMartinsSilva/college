@@ -1,12 +1,11 @@
-// O código lê matrícula e salário de 15 funcionários, exibe um relatório em ordem decrescente de salário e exibe informações como a soma salarial, média salarial e quais e quantos funcionários recebem menos que a média
-
+// Lê matrícula e salário de 15 funcionários e exibe uma série de informações com base nessas listas
 #include <iostream>
 
 #define SIZE 15
 
 using namespace std;
 
-void leDados(int matricula[], float salario[]) {
+void leDados(int matricula[], float salario[]) { // Leitura de dados dos 15 funcionários
     for(int i = 0; i < SIZE; i++) {
         cout << "===== FUNCIONARIO " << i+1 << " =====\n";
         cout << "Matricula: ";
@@ -16,7 +15,7 @@ void leDados(int matricula[], float salario[]) {
     }
 }
 
-void relatorioOrdenadoDecrescente(int matricula[], float salario[]) {
+void relatorioOrdenadoDecrescente(int matricula[], float salario[]) { // Exibe um relatório em ordem decrescente de salários
     int maior, aux;
     float aux2;
     for(int i = 0; i < SIZE; i++) {
@@ -42,7 +41,7 @@ void relatorioOrdenadoDecrescente(int matricula[], float salario[]) {
     }
 }
 
-float soma(float salario[]) {
+float soma(float salario[]) { // Soma os salários de todos os funcionários
     float soma = 0;
     for(int i = 0; i < SIZE; i++) {
         soma += salario[i];
@@ -50,7 +49,7 @@ float soma(float salario[]) {
     return soma;
 }
 
-void menoresQueMedia(int matricula[], float salario[]) {
+void menoresQueMedia(int matricula[], float salario[]) { // Exibe quantos e quais funcionários recebem menos que a média salarial
     float media = soma(salario) / SIZE;
     int contador = 0;
     cout << "Media salarial: R$" << media << "\n";

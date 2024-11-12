@@ -1,0 +1,3 @@
+Neste projeto, os integrantes do grupo precisam implementar uma simples chamada de sistema getreadcount() no código do xv6-riscv que contabilize quantas chamadas de sistema read() foram feitas desde o início do boot. Mais informações em https://github.com/igorcompuff/ostep-projects/tree/master/initial-xv6
+
+OBS: Os arquivos desta pasta contém apenas pequenos trechos que foram alterados no código do xv6-riscv para implementar a chamada de sistema getreadcount().
