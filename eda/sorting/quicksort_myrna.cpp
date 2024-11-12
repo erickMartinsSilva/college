@@ -1,3 +1,4 @@
+// Algoritmo que usa o Quick Sort para organizar um vetor de 8 posições (Escrito por Myrna Amorim)
 #include <iostream>
 #include <stdlib.h>
 
