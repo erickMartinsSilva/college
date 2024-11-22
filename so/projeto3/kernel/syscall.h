@@ -1,0 +1,1 @@
+#define SYS_getreadcount XX // onde XX é o número seguinte da última chamada de sistema (no meu caso, 22)

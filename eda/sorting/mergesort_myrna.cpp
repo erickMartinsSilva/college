@@ -1,3 +1,4 @@
+// Algoritmo que usa o Merge Sort para organizar um vetor de 8 posições (Escrito por Prof. Myrna Amorim)
 #include <iostream>
 
 using namespace std;
