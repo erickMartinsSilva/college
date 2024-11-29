@@ -1,4 +1,4 @@
-// Exemplo do funcionamento de uma lista encadeada com a política de fila
+// Exemplo do funcionamento de uma lista encadeada ordenada com a política de fila
 #include <iostream>
 
 using namespace std;
@@ -55,12 +55,12 @@ void consultar() {
         cout << "Insira um numero para verificar se o mesmo esta na lista: ";
         cin >> num;
         aux = topo;
-        while(aux != NULL && !achei) {
+        while(aux != NULL && !achei) { // percorre a lista encadeada até chegar no fim ou até o número ser encontrado
             if(aux->info == num) {
                 achei = true;
             } else {
                 aux = aux->prox;
-                cntd++;
+                cntd++; // contador para verificar a posição do número na lista
             }
         }
         if(achei) {
