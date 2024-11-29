@@ -1,26 +1,20 @@
-// Implementação de uma pilha com menu que permite listar a pilha além de adicionar e remover elementos dela
+// Exemplo de uma lista encadeada com a política de pilha (FIFO)
 #include <iostream>
 
 using namespace std;
 
-struct no {
+struct no { // estrutura que representa cada elemento da lista
     int info;
     struct no* prox;
 };
 
 typedef struct no* noPtr;
-
 noPtr topo = NULL;
 
 int menu() {
-    int op = 0;
-    cout << "\n1. Empilhar\n2. Desempilhar\n3. Listar\n4. Sair\n";
-    do {
-        if(op > 4) {
-            cout << "ERRO: Opcao invalida. Tente novamente: ";
-        }
-        cin >> op;
-    } while(op > 4);
+    int op;
+    cout << "\n1. Inserir\n2. Remover\n3. Imprimir\n4. Sair\n";
+    cin >> op;
     return op;
 }
 
@@ -31,26 +25,11 @@ bool listaVazia() {
 }
 
 void push() {
-    noPtr p;
-    int valor;
-
-    p = new no;
+    noPtr p = new no;
     cout << "Digite o valor do elemento: ";
-    cin >> valor;
-    p->info = valor;
+    cin >> p->info;
     p->prox = topo;
     topo = p;
-}
-
-void imprimirLista() {
-    noPtr aux;
-    aux = topo;
-    if(!listaVazia()) {
-        while(aux != NULL) {
-            cout << aux->info;
-            aux = aux->prox;
-        }
-    } else cout << "Lista vazia!";
 }
 
 void pop() {
@@ -59,6 +38,16 @@ void pop() {
         topo = topo->prox;
         delete(p);
         cout << "Elemento retirado da pilha.";
+    } else cout << "Lista vazia!";
+}
+
+void imprimirLista() {
+    noPtr aux = topo;
+    if(!listaVazia()) {
+        while(aux != NULL) {
+            cout << aux->info << " ";
+            aux = aux->prox;
+        }
     } else cout << "Lista vazia!";
 }
 
