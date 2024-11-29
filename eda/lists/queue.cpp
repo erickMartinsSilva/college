@@ -3,13 +3,13 @@
 
 using namespace std;
 
-struct no {
+struct no { // estrutura para cada elemento da lista
     int info;
     struct no* prox;
 };
 
 typedef struct no* noPtr;
-noPtr topo = NULL;
+noPtr topo = NULL; // lista inicialmente vazia
 
 int menu() {
     int op; 
@@ -34,30 +34,30 @@ void imprimirLista() {
     } else cout << "Lista vazia!";
 }
 
-void enqueue() {
+void enqueue() { // insere elementos no fim da lista
     noPtr ult, p = new no;
     cout << "Digite o valor do elemento: ";
     cin >> p->info;
     p->prox = NULL;
     if(listaVazia()) {
-        topo = p;
+        topo = p; // insere elemento no topo se a lista estiver vazia (topo = último elemento)
         cout << "Elemento adicionado com sucesso!\nNova lista: "; imprimirLista();
     } else {
         ult = topo;
-        while(ult->prox != NULL) {
+        while(ult->prox != NULL) { // usa um loop while para encontrar o último elemento da lista
             ult = ult->prox;
         }
-        ult->prox = p;
+        ult->prox = p; // o elemento após o último agora é p, o novo último da lista
         cout << "Elemento adicionado com sucesso!\nNova lista: "; imprimirLista();
     }
 }
 
-void dequeue() {
+void dequeue() { // remove elementos do topo da lista
     noPtr p = topo;
     if(listaVazia()) {
         cout << "Lista vazia!";
     } else {
-        topo = topo->prox;
+        topo = topo->prox; // topo agora aponta para o elemento depois de p, o novo primeiro elemento da lista
         delete(p);
         cout << "Elemento removido com sucesso!\nNova lista: "; imprimirLista();
     }

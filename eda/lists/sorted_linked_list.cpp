@@ -60,7 +60,7 @@ void inserir() {
     }
 }
 
-void retirar() {
+void retirar() { // como esta lista não tem uma política pré-definida, podemos remover qualquer elemento
     noPtr aux, ant; int num;
     cout << "Insira um numero: ";
     cin >> num;
@@ -68,17 +68,17 @@ void retirar() {
         cout << "Lista vazia!";
     } else {
         aux = topo;
-        while(aux != NULL && aux->info != num) {
+        while(aux != NULL && aux->info != num) { // passa por cada elemento da lista até encontrar o número desejado ou até chegar ao fim
             ant = aux;
             aux = aux->prox;
         }
         if(aux->info == num) {
-            if(aux == topo) {
-                topo = topo->prox;
-                delete(aux);
+            if(aux == topo) { 
+                topo = topo->prox; // se ele estiver no topo, o topo passa a apontar pro elemento posterior ao número
+                delete(aux); // número removido
             } else {
-                ant->prox = aux->prox;
-                delete(aux);
+                ant->prox = aux->prox; // se ele estiver no fim ou entre dois números, o número anterior aponta para o próximo
+                delete(aux); // número removido
             }
             cout << "Elemento removido com sucesso!\nNova lista: "; imprimirLista(topo);
         } else cout << "Numero nao encontrado\n";
