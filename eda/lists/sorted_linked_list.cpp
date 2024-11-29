@@ -11,7 +11,6 @@ struct no { // declaração de uma estrutura que representa cada elemento da lis
 typedef struct no* noPtr;
 
 noPtr topo = NULL; // como topo aponta para NULL, a lista inicialmente está vazia
-noPtr topoPilha = NULL;
 
 int menu() {
     int op;
@@ -113,12 +112,12 @@ void crescente() {
 }
 
 void decrescente() {
-    noPtr p, aux;
+    noPtr topoPilha = NULL, p, aux;
     aux = topo;
     while(aux != NULL) {
         p = new no;
-        p = aux;
         p->prox = topoPilha;
+        p->info = aux->info;
         topoPilha = p;
         aux = aux->prox;
     }
