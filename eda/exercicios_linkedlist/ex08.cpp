@@ -1,3 +1,4 @@
+// Função que retira elementos de uma lista simplesmente encadeada
 #include <iostream>
 
 using namespace std;

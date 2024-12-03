@@ -1,3 +1,4 @@
+// Funções de inserção e remoção de termos com base na política de pilha (last in, first out)
 #include <iostream>
 
 using namespace std;
