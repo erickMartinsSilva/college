@@ -1,4 +1,4 @@
-// Exemplo de uma lista encadeada com a política de pilha (FIFO)
+// Exemplo de uma lista encadeada com a política de pilha (LIFO)
 #include <iostream>
 
 using namespace std;

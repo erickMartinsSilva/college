@@ -1,4 +1,4 @@
-// Exemplo do funcionamento de uma lista encadeada com a política de fila (LIFO)
+// Exemplo do funcionamento de uma lista encadeada com a política de fila (FIFO)
 #include <iostream>
 
 using namespace std;
