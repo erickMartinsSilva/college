@@ -18,11 +18,9 @@ void printArray(int arr[]) {
 }
 
 int linearSearch(int arr[], int alvo) {
-    bool achou = false;
     int i = 0;
-    while(!achou && i < SIZE) {
+    while(i < SIZE) {
         if(arr[i] == alvo) {
-            achou = true;
             return i;
         }
         else {
@@ -33,15 +31,13 @@ int linearSearch(int arr[], int alvo) {
 }
 
 int main() {
-    int alvo, arr[SIZE] = {72, 39, 8, 56, 91, 23, 65, 4, 19, 88};
+    int alvo, i, arr[SIZE] = {72, 39, 8, 56, 91, 23, 65, 4, 19, 88};
     printArray(arr);
     cout << "Insira um numero para buscar: ";
     cin >> alvo;
-    if(linearSearch(arr,alvo) == -1) {
-        cout << "Numero nao encontrado\n";
-    }
-    else {
-        cout << "Numero encontrado! Indice: " << linearSearch(arr,alvo) + 1 << "\n";
+    switch(i = linearSearch(arr, alvo)) {
+        case -1: cout << "Numero nao encontrado\n"; break;
+        default: cout << "Numero encontrado! Indice: " << i << endl; break;
     }
     return 0;
 }
