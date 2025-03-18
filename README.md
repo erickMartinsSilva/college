@@ -1,1 +1,1 @@
-Pasta com a resolução de exercícios de programação de diversas matérias que resolvi durante o curso de Bacharelado em Ciência da Computação no Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ).
+Repositório com exercícios resolvidos por mim em disciplinas de programação durante minha formação no curso de Bacharelado em Ciência da Computação pelo Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ)
