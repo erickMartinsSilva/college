@@ -6,10 +6,11 @@ public class AgeVerifier {
         int age = scan.nextInt();
         if(age < 18) {
             System.out.println("Menor de idade");
-        } else if (age > 18 && age < 60) {
+        } else if (age <= 60) {
             System.out.println("Adulto");
         } else {
             System.out.println("Idoso");
         }
+        scan.close();
     }
 }

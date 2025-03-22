@@ -10,5 +10,6 @@ public class SumTwoNumbers {
         n2 = scan.nextInt();
         sum = n1 + n2;
         System.out.println("N1 + N2 = " + sum);
+        scan.close();
     }
 }

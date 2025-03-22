@@ -37,5 +37,6 @@ public class Calculator {
         } else {
             System.out.println("Error: Invalid operation");
         }
+        scan.close();
     }
 }

@@ -10,5 +10,6 @@ public class EvenOdd {
         } else {
             System.out.println("Odd");
         }
+        scan.close();
     }
 }
