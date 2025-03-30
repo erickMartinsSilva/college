@@ -1,3 +1,5 @@
+// Exibe a soma dos elementos do array [1,2,3,4,5]
+
 public class ArraySum {
     public static int arraysum(int[] arr) {
         int sum = 0;

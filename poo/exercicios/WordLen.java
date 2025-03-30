@@ -1,3 +1,5 @@
+// Exibe o tamanho em caracteres de uma string
+
 import java.util.Scanner;
 
 public class WordLen {

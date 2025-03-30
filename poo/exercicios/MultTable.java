@@ -1,4 +1,5 @@
-// imprime a tabuada do número inserido como parâmetro
+// Imprime a tabuada do número inserido como parâmetro
+
 public class MultTable {
     public static void main(String[] args) {
         int num = Integer.parseInt(args[0]);
