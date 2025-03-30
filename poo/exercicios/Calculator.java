@@ -1,3 +1,5 @@
+// Calculadora simples para realizar operações aritméticas com dois números
+
 import java.util.Scanner;
 
 public class Calculator {

@@ -1,3 +1,5 @@
+// Verifica se um número é par ou ímpar
+
 import java.util.Scanner;
 
 public class EvenOdd {

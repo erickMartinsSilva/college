@@ -1,3 +1,5 @@
+// Com base na idade inserida, atribui a categoria "Menor de idade", "Adulto" ou "Idoso"
+
 import java.util.Scanner;
 
 public class AgeVerifier {
