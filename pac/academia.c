@@ -143,13 +143,11 @@ void relatorioOrdenado(aluno turma[]) {
 }
 
 int main() {
-	aluno turma[SIZE];
-	aluno turma_ord[SIZE];
+	aluno turma[SIZE], turma_ord[SIZE];
 	int escolha;
 	printf("\n===== ACADEMIA =====\n");
 	do {
-		escolha = menu();
-		switch(escolha) {
+		switch(escolha = menu()) {
 			case 1:
 				leDados(turma);
 				break;
