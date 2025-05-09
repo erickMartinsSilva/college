@@ -12,7 +12,7 @@ public class Conta {
         this.nomeCliente = n;
     }
 
-    public String getSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
