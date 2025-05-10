@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class TesteCasa {
 	public static void main(String[] args) {
 		Casa casa = new Casa();

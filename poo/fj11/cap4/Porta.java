@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class Porta {
 	boolean aberta;
 	String cor;

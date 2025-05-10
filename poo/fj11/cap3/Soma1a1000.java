@@ -1,4 +1,4 @@
-package cap3;
+package fj11.cap3;
 
 public class Soma1a1000 {
     public static void main(String[] args) {

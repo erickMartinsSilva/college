@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class Fibonacci {
 	public int calculaFibonacci(int n) {
 		if(n == 1) {

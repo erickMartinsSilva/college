@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class Casa {
 	String cor;
 	Porta porta1;

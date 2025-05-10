@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class TestePessoa {
 	public static void main(String[] args) {
 		Pessoa p1 = new Pessoa();

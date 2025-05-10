@@ -1,4 +1,4 @@
-package cap3;
+package fj11.cap3;
 
 public class Numeros150a300 {
     public static void main(String[] args) {

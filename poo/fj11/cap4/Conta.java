@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class Conta {
 	String nome;
 	int numero;

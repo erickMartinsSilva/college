@@ -1,3 +1,5 @@
+package fj11.cap4;
+
 public class TestePorta {
 	public static void main(String[] args) {
 		Porta porta = new Porta();
