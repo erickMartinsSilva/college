@@ -1,3 +1,5 @@
+package aula2;
+
 public class Moto {
     String placa;
     String cor;

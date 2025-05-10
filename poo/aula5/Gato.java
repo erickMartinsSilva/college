@@ -1,3 +1,3 @@
-public class Gato extends Animal {
+package aula5;
 
-}
+public class Gato extends Animal {}

@@ -1,3 +1,5 @@
+package aula5;
+
 public class Animal {
     private String nome;
     private int idade;

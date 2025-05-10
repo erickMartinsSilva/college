@@ -1,3 +1,5 @@
+package aula4;
+
 public class Media {
     public static void main(String[] args) {
         int u[] = {3, 2, 4, 5, 6, 1};

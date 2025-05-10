@@ -1,3 +1,5 @@
+package aula4;
+
 public class Pessoas {
     public static void main(String[] args) {
         Pessoa pessoas[] = new Pessoa[3];
