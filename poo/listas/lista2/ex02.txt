@@ -1,0 +1,16 @@
+Quais declarações de variáveis estão incorretas?
+
+public class Elefante { 
+    private String nome;
+    // correta
+    private int idade;
+    // correta 
+    public boolean morto;
+    // correta, porém usar o modificador de acesso private seria uma prática melhor
+    String cor;
+    // correta, o modificador de acesso default é aplicado quando não especificamos um 
+    default double peso;
+    // incorreta, pois por mais que o modificador de acesso default exista, ele não é uma palavra reservada
+    public tamanho int; 
+    // incorreta, pois o tipo da variável deve vir antes de seu nome
+}

@@ -1,0 +1,14 @@
+Observe o exemplo abaixo e diga se há algo de errado:
+
+public class Conta { 
+    double saldo; 
+      
+    public void calcula () { 
+        if (saldo < 1000) { 
+           double testeSaldo = saldo*0.1; 
+        } 
+        System.out.println(testeSaldo); 
+    } 
+}
+
+R: O exemplo não será capaz de imprimir o valor de testeSaldo no console, visto que a variável foi criada e modificada apenas no escopo do bloco if do método calcula.

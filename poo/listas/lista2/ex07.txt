@@ -1,0 +1,15 @@
+Observe o exemplo abaixo e diga se há algo errado:
+
+public class Conta { 
+     double saldo; 
+      
+     public void calcula () { 
+        if (saldo) { 
+           System.out.println(“Tem saldo”);     
+        } else { 
+           System.out.println(“Não tem saldo”);     
+        } 
+     } 
+}
+
+R: Testes condicionais em valores numéricos retornam false para zero e true para qualquer valor diferente de zero. Logo, não há problemas no exemplo.

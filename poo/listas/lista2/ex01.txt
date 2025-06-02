@@ -1,0 +1,17 @@
+Diga quais exemplos abaixo compilam:
+
+a - public class Caixa {}
+
+O exemplo compila por seguir a estrutura correta de declaração de classes (modificador, class, nome da classe)
+
+b - public Camisa class {}
+
+O exemplo não compila, visto que o nome da classe não pode vir antes da palavra class na declaração.
+
+c - public Arvore {}
+
+O exemplo não compila devido a inexistência da palavra class na declaração.
+
+d - public class Terreno {}
+
+O exemplo compila por seguir a estrutura correta de declaração de classes (modificador, class, nome da classe)
