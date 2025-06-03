@@ -1,3 +1,3 @@
-package aula5;
+package aulas.aula5;
 
 public class Elefante extends Animal {}

@@ -1,4 +1,4 @@
-package aula5;
+package aulas.aula5;
 
 public class Leao extends Animal {
     public void rugir() {
