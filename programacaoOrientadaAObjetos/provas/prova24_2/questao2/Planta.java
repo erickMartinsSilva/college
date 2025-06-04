@@ -1,4 +1,6 @@
-public class Planta implements Comparable<Planta> {
+package provas.prova24_2.questao2;
+
+public class Planta {
     private String id;
     private String nome;
     private double tamanho;
@@ -25,10 +27,6 @@ public class Planta implements Comparable<Planta> {
 
     public void setTamanho(double tamanho) {
         this.tamanho = tamanho;
-    }
-
-    public int compareTo(Planta p) {
-        return Double.compare(this.getTamanho(), p.getTamanho());
     }
 
     public boolean equals(Object o) {

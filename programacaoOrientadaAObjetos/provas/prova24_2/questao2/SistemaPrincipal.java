@@ -1,10 +1,12 @@
+package provas.prova24_2.questao2;
+
 import java.util.Scanner;
+import java.util.Arrays;
 import java.util.ArrayList;
-import provas.prova24_2.questao2.Utils;
 
 public class SistemaPrincipal {
     public static void main(String[] args) {
-        ArrayList<Planta> plantas = new ArrayList();
+        ArrayList<Planta> plantas = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
         int op;
@@ -15,16 +17,18 @@ public class SistemaPrincipal {
             System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
             op = scan.nextInt();
+            scan.nextLine();
 
             switch(op) {
                 case 1:
-                    System.out.println("Identificação: ");
+                    System.out.print("Identificação: ");
                     String id = scan.nextLine();
-                    System.out.println("Nome: ");
+                    System.out.print("Nome: ");
                     String nome = scan.nextLine();
-                    System.out.println("Tamanho (cm): ");
+                    System.out.print("Tamanho (cm): ");
                     double tamanho = scan.nextDouble();
-                    System.out.println("Tipo (Briofita/Pteridofita): ");
+                    scan.nextLine();
+                    System.out.print("Tipo (Briofita/Pteridofita): ");
                     String tipo = scan.nextLine();
 
                     if(tipo.equals("Briofita")) {
@@ -40,10 +44,11 @@ public class SistemaPrincipal {
                     } else System.out.println("Erro: Tipo inválido");
                     break;
                 case 2:
-                    System.out.println("Insira a identificação da planta: ");
+                    System.out.print("Insira a identificação da planta: ");
                     String ident = scan.nextLine();
                     Planta p = new Planta(ident);
                     if(Utils.existe(plantas, p)) {
+                        System.out.println("Planta encontrada!");
                         for(int i = 0; i < plantas.size(); i++) {
                             if(plantas.get(i).getId().equals(p.getId())) {
                                 System.out.println(plantas.get(i));
@@ -52,7 +57,7 @@ public class SistemaPrincipal {
                     } else System.out.println("A planta com ID " + ident + " não existe.");
                     break;
                 case 3:
-                    System.out.println(Utils.ordena(plantas));
+                    System.out.println(Arrays.toString(Utils.ordena(plantas)));
                     break;
                 default:
                     break;

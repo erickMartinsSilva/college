@@ -1,3 +1,5 @@
+package provas.prova24_2.questao1;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -8,8 +10,8 @@ public class Utilidades {
     }
 
     public static boolean moderar(String frase) {
-        String[] fraseDividida = frase.split(' ');
-        List<String> palavroes = Utils.getPalavroes();
+        String[] fraseDividida = frase.split(" ");
+        List<String> palavroes = Utilidades.getPalavroes();
 
         for(int i = 0; i < fraseDividida.length; i++) {
             for(int j = 0; j < palavroes.size(); j++) {
