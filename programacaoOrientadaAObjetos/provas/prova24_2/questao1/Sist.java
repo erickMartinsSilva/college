@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import provas.prova24_2.questao1.Utils;
+
+public class Sist {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Insira uma frase: ");
+        String input = scan.nextLine();
+
+        boolean temPalavrao = Utils.moderar(input);
+        if(temPalavrao) {
+            System.out.println("A frase contem um ou mais palavroes");
+        } else System.out.println("A frase nao contem palavroes");
+    }
+}
