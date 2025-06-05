@@ -50,7 +50,7 @@ public class SistemaPrincipal {
                     if(Utils.existe(plantas, p)) {
                         System.out.println("Planta encontrada!");
                         for(int i = 0; i < plantas.size(); i++) {
-                            if(plantas.get(i).getId().equals(p.getId())) {
+                            if(plantas.get(i).equals(p)) {
                                 System.out.println(plantas.get(i));
                             }
                         }
