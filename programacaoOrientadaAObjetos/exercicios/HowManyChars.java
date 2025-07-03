@@ -1,4 +1,5 @@
 // Conta quantos caracteres de cada tipo tem numa string
+package exercicios;
 
 import java.util.Scanner;
 

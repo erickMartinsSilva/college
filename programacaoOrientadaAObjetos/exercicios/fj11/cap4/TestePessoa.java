@@ -1,4 +1,4 @@
-package fj11.cap4;
+package exercicios.fj11.cap4;
 
 public class TestePessoa {
 	public static void main(String[] args) {

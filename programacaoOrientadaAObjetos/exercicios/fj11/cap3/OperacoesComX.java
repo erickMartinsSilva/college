@@ -1,4 +1,5 @@
-package fj11.cap3;
+package exercicios.fj11.cap3;
+
 import java.util.Scanner;
 
 public class OperacoesComX {

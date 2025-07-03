@@ -1,4 +1,4 @@
-package provas.prova24_2.questao1;
+package provas.P1.prova24_2.questao1;
 
 import java.util.Scanner;
 

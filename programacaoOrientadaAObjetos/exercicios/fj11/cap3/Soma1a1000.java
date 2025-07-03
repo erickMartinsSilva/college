@@ -1,4 +1,4 @@
-package fj11.cap3;
+package exercicios.fj11.cap3;
 
 public class Soma1a1000 {
     public static void main(String[] args) {

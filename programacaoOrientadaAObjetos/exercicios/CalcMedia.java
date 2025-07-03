@@ -1,4 +1,5 @@
 // Calcula a média dos argumentos inseridos pelo usuário, sendo eles dois números inteiros
+package exercicios;
 
 public class CalcMedia {
     public static void main(String[] args) {

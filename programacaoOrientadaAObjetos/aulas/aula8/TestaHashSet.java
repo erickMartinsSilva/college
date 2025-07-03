@@ -1,3 +1,5 @@
+package aula8;
+
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -18,7 +20,7 @@ public class TestaHashSet {
 
     public static void main(String[] args) {
         // HashSet: estrutura de dados que não garante uma ordem, porém não é aleatória
-        HashSet x = new HashSet();
+        HashSet x = new HashSet<Aluno>();
         x.add("Uva");
         x.add("Bolo");
         x.add("Mesa");

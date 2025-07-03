@@ -1,4 +1,5 @@
 // Com base na idade inserida, atribui a categoria "Menor de idade", "Adulto" ou "Idoso"
+package exercicios;
 
 import java.util.Scanner;
 

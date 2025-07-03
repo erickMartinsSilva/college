@@ -1,4 +1,4 @@
-package fj11.cap4;
+package exercicios.fj11.cap4;
 
 public class Pessoa {
 	String nome;

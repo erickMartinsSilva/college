@@ -1,4 +1,5 @@
 // Calculadora simples para realizar operações aritméticas com dois números
+package exercicios;
 
 import java.util.Scanner;
 

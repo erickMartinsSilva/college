@@ -1,4 +1,5 @@
 // Soma dois números
+package exercicios;
 
 import java.util.Scanner;
 

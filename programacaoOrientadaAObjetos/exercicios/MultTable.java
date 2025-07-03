@@ -1,4 +1,5 @@
 // Imprime a tabuada do número inserido como parâmetro
+package exercicios;
 
 public class MultTable {
     public static void main(String[] args) {

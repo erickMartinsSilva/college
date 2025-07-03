@@ -1,4 +1,5 @@
 // Exibe o tamanho em caracteres de uma string
+package exercicios;
 
 import java.util.Scanner;
 

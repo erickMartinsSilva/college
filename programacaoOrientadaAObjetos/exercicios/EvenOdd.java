@@ -1,4 +1,5 @@
 // Verifica se um número é par ou ímpar
+package exercicios;
 
 import java.util.Scanner;
 
