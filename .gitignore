@@ -1,0 +1,5 @@
+# output files
+*.class
+
+# documents
+*.pdf
