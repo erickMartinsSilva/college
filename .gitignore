@@ -1,5 +1,6 @@
 # output files
 *.class
+*.exe
 
 # documents
 *.pdf
