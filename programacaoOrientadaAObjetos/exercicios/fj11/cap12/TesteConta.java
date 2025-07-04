@@ -21,7 +21,7 @@ public class TesteConta {
         try {
             // exceção: valor de saque maior que valor de saldo
             cc.saca(60);
-        } catch (Exception e) {
+        } catch (SaldoInsuficienteException e) {
             System.out.println("Erro: " + e.getMessage());
         }
 	}
