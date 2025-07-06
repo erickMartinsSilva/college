@@ -1,4 +1,4 @@
-package cap12;
+package exercicios.fj11.cap12;
 
 public class TesteConta {
 	public static void main(String[] args) {

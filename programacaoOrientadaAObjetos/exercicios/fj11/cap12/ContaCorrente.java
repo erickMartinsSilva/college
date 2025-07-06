@@ -1,4 +1,4 @@
-package cap12;
+package exercicios.fj11.cap12;
 
 public class ContaCorrente {
     private int numero;
