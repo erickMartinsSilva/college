@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
+    // estrutura de arquivo para armazenar os arquivos de entrada e saída
     FILE *entrada, *saida;
     int c;
 
@@ -12,12 +13,14 @@ int main(int argc, char** argv) {
         return 1;
     }
 
+    // abre o arquivo de entrada no modo de leitura binária
     entrada = fopen(argv[1], "rb");
     if(!entrada) {
         fprintf(stderr, "Não foi possível abrir o arquivo para leitura.");
         return 1;
     }
 
+    // abre o arquivo de saída no modo de escrita binária
     saida = fopen(argv[2], "wb");
     if(!saida) {
         fprintf(stderr, "Não foi possível abrir o arquivo para escrita.");
@@ -31,6 +34,7 @@ int main(int argc, char** argv) {
         c = fgetc(entrada);
     }
 
+    // fecha os arquivos de entrada e saída
     fclose(entrada);
     fclose(saida);
     return 0;
