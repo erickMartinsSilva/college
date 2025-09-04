@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     char c;
 
     if(argc != 2) {
-        fprintf(stderr, "Erro: Quantidade de argumentos insuficiente. Uso: countb [ARQUIVO]\n");
+        fprintf(stderr, "Erro: Quantidade de argumentos insuficiente. Uso: letters [ARQUIVO]\n");
     }
 
     entrada = fopen(argv[1], "r");
