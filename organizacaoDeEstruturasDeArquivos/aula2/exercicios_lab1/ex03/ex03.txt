@@ -1,0 +1,7 @@
+r = Abre o arquivo em modo de leitura.
+w = Abre o arquivo em modo de escrita, criando um se ele não existir. Se ele existir, a escrita sobrescreve o original.
+a = Abre o arquivo em modo de acrescentar (preserva o conteúdo existente, inserindo dados logo em sequência), criando um se ele não existir.
+r+ = Abre o arquivo em modo de leitura e escrita. Se ele existir, a escrita sobrescreve o original. Se não, retorna NULL.
+w+ = Abre o arquivo em modo de leitura e escrita, criando um se ele não existir. Se ele existir, a escrita sobrescreve o original.
+r+b = Abre o arquivo em modo de leitura e escrita binária. Se ele existir, a escrita sobrescreve o original. Se não, retorna NULL.
+rb = Abre o arquivo em modo de leitura binária. Se ele não existir, retorna NULL.
