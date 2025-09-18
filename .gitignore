@@ -4,3 +4,6 @@
 
 # documents
 *.pdf
+
+# IDE files
+.vscode
