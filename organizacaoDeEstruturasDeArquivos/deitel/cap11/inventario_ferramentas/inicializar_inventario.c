@@ -1,6 +1,6 @@
 // inicializa o inventário com 100 registros vazios
 #include <stdio.h>
-#include <ferramenta.h>
+#include "ferramenta.h"
 
 int main() {
     FILE *hPtr;
