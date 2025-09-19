@@ -2,38 +2,39 @@
 #include "ferramenta.h"
 
 void menu() {
-    printf("=== INVENTÁRIO DE FERRAMENTAS ===");
-    printf("\n1. Adicionar registro\n2. Remover registro\n3. Ver registro\n4. Ver todos os registros\n5. Sair\n");
+    printf("\n=== INVENTÁRIO DE FERRAMENTAS ===\n\n");
+    printf("1. Adicionar registro\n2. Remover registro\n3. Ver registro\n4. Ver registros preenchidos\n5. Remover todos os registros\n6. Sair\n\n");
 }
 
 void add_entry(FILE *hPtr) {
     int num;
     FerramentaData buffer;
 
-    printf("Insira o número do registro que você quer adicionar: ");
+    printf("\nInsira o número do registro que você quer adicionar: ");
     scanf("%d", &num);
 
     if(num < 1 || num > AMOUNT_ENTRYS) {
         printf("Erro: Número de registro inválido\n\n");
     } else {
-        rewind(hPtr);
-
         fseek(hPtr, (num-1) * sizeof(FerramentaData), SEEK_SET);
         fread(&buffer, sizeof(FerramentaData), 1, hPtr);
 
         if(buffer.numero != 0) {
-            printf("Erro: Registro já existe\n\n");
+            printf("\nErro: Registro já existe\n");
         } else {
             FerramentaData ferramenta = {num, "", 0, 0.0};
 
-            printf("Insira informações da ferramenta (Nome Quantidade Custo): ");
+            printf("Insira o nome da ferramenta: ");
+            scanf(" %[^\n]", ferramenta.nome);
+            printf("Insira a quantidade da ferramenta: ");
+            scanf("%d", &ferramenta.qtd);
+            printf("Insira o custo da ferramenta: R$");
+            scanf("%f", &ferramenta.custo);
 
-            // FIXME: esse scanf dá um loop infinito na main
-            scanf(" %[^\n] %d %d", ferramenta.nome, &ferramenta.qtd, &ferramenta.custo);
-
+            fseek(hPtr, (num-1) * sizeof(FerramentaData), SEEK_SET);
             fwrite(&ferramenta, sizeof(FerramentaData), 1, hPtr);
 
-            printf("Escrita realizada com sucesso!\n\n");
+            printf("\nEscrita realizada com sucesso!\n");
         }
     }
 }    
@@ -42,24 +43,48 @@ void remove_entry(FILE *hPtr) {
     int num;
     FerramentaData buffer;
 
-    printf("Insira o número do registro que você quer remover: ");
+    printf("\nInsira o número do registro que você quer remover: ");
     scanf("%d", &num);
 
     if(num < 1 || num > AMOUNT_ENTRYS) {
-        printf("Erro: Número de registro inválido\n\n");
+        printf("\nErro: Número de registro inválido\n");
     } else {
         fseek(hPtr, (num-1) * sizeof(FerramentaData), SEEK_SET);
         fread(&buffer, sizeof(FerramentaData), 1, hPtr);
 
-        if(buffer.numero != 0) {
-            FerramentaData ferramentaVazia = {0, "", 0, 0.0};
-            
-            fwrite(&ferramentaVazia, sizeof(FerramentaData), 1, hPtr);
-
-            printf("Registro removido com sucesso!\n\n");
+        if(buffer.numero == 0) {
+            printf("\nErro: Registro vazio\n");
         } else {
-            printf("Erro: Registro já está vazio\n\n");
+            FerramentaData ferramentaVazia = {0, "", 0, 0.0};
+
+            fseek(hPtr, (num-1) * sizeof(FerramentaData), SEEK_SET);
+            if(fwrite(&ferramentaVazia, sizeof(FerramentaData), 1, hPtr) == 1) {
+                printf("\nRegistro removido com sucesso!\n");
+            } else {
+                printf("\nErro ao remover registro\n");
+            }
         }
+    }
+}
+
+void remove_all_entries(FILE *hPtr) {
+    char escolha;
+    printf("Tem certeza que deseja remover todos os registros? Essa ação não pode ser desfeita.\n(S/N): ");
+    scanf(" %c", &escolha);
+
+    if(escolha == 83 || escolha == 115) {
+        FerramentaData ferramentaVazia = {0, "", 0, 0.0};
+
+        rewind(hPtr);
+        for(int i = 0; i < AMOUNT_ENTRYS; i++) {
+            fwrite(&ferramentaVazia, sizeof(FerramentaData), 1, hPtr);
+        }
+
+        printf("\nRegistros removidos com sucesso!\n");
+    } else if(escolha == 78 || escolha == 110) {
+        printf("\nRetornando ao menu principal...\n");
+    } else {
+        printf("\nEscolha inválida\n");
     }
 }
 
@@ -67,20 +92,20 @@ void print_entry(FILE *hPtr) {
     int num;
     FerramentaData buffer;
 
-    printf("Insira o número do registro que deseja visualizar: ");
+    printf("\nInsira o número do registro que deseja visualizar: ");
     scanf("%d", &num);
 
     if(num < 1 || num > AMOUNT_ENTRYS) {
-        printf("Erro: Número de registro inválido\n\n");
+        printf("\nErro: Número de registro inválido\n");
     } else {
         fseek(hPtr, (num-1) * sizeof(FerramentaData), SEEK_SET);
         fread(&buffer, sizeof(FerramentaData), 1, hPtr);
         
         if(buffer.numero == 0) {
-            printf("Registro vazio!\n\n");
+            printf("\nRegistro vazio!\n");
         } else {
-            printf("Registro %d\nNome: %s\nQuantidade: %d\nCusto: %.2f\n\n",
-                num,
+            printf("\nRegistro %d\nNome: %s\nQuantidade: %d\nCusto: %.2f\n",
+                buffer.numero,
                 buffer.nome,
                 buffer.qtd,
                 buffer.custo);
@@ -90,48 +115,50 @@ void print_entry(FILE *hPtr) {
 
 void print_all_entries(FILE *hPtr) {
     FerramentaData buffer;
-    int i = 0;
-
-    rewind(hPtr);
     
-    fread(&buffer, sizeof(FerramentaData), 1, hPtr);
-    while(i <= AMOUNT_ENTRYS) {
-        if(buffer.numero != 0) {
-            printf("Registro %d\nNome: %s\nQuantidade: %d\nCusto: %.2f\n",
-                buffer.numero,
-                buffer.nome,
-                buffer.qtd,
-                buffer.custo);
-        }
+    rewind(hPtr);
+
+    for(int i = 0; i < AMOUNT_ENTRYS; i++) {
         fread(&buffer, sizeof(FerramentaData), 1, hPtr);
-        i++;
+        if(buffer.numero != 0) {
+            if(i == 0) {
+                printf("\nNúmero\tNome\t\t\tQtd\tCusto\n");
+            }
+            printf("%d\t%s\t\t%d\tR$%.2f\n",
+                    buffer.numero,
+                    buffer.nome,
+                    buffer.qtd,
+                    buffer.custo);
+        }
     }
 }
 
 int main() {
     FILE *hPtr;
     FerramentaData buffer;
+    int op;
 
     hPtr = fopen("hardware.dat", "rb+");
     if(!hPtr) {
-        fprintf(stderr, "Erro ao abrir arquivo\n");
-    } else {
-        int op;
-        do {
-            menu();
-            printf("Insira a opção desejada: ");
-            scanf("%d", &op);
-
-            switch(op) {
-                case 1: add_entry(hPtr); break;
-                case 2: remove_entry(hPtr); break;
-                case 3: print_entry(hPtr); break;
-                case 4: print_all_entries(hPtr); break;
-                case 5: break;
-                default: printf("Erro: Opção inválida\n\n");
-            }
-        } while(op != 5);
+        fprintf(stderr, "ERRO: Não foi possível abrir o arquivo de inventário. Se ele não existir, inicialize-o com inicializar_inventario.\n");
+        return 1;
     }
+    
+    do {
+        menu();
+        printf("Insira a opção desejada: ");
+        scanf("%d", &op);
+
+        switch(op) {
+            case 1: add_entry(hPtr); break;
+            case 2: remove_entry(hPtr); break;
+            case 3: print_entry(hPtr); break;
+            case 4: print_all_entries(hPtr); break;
+            case 5: remove_all_entries(hPtr); break;
+            case 6: break;
+            default: printf("Erro: Opção inválida\n\n");
+        }
+    } while(op != 6);
 
     printf("Saindo...\n");
     fclose(hPtr);
