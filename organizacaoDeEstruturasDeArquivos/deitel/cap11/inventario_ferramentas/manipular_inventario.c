@@ -110,7 +110,7 @@ void print_entry(FILE *hPtr) {
         if(buffer.numero == 0) {
             printf("\nRegistro vazio!\n");
         } else {
-            printf("\nRegistro %d\nNome: %s\nQuantidade: %d\nCusto: R$%.2f\n\n", buffer.numero, buffer.nome, buffer.qtd, buffer.custo);
+            printFerramenta(buffer, 'd');
         }
     }
 }
@@ -126,7 +126,7 @@ void print_all_entries(FILE *hPtr) {
             if(i == 0) {
                 printf("\nNúmero\tNome\t\t\tQtd\tCusto\n");
             }
-            printf("%d\t%s\t\t%d\tR$%.2f\n\n", buffer.numero, buffer.nome, buffer.qtd, buffer.custo);
+            printFerramenta(buffer, 't');
         }
     }
 }
