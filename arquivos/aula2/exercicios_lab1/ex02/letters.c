@@ -1,4 +1,4 @@
-// letters: conta quantas linhas de texto um arquivo tem
+// letters.c: conta quantas vezes cada letra aparece num arquivo de texto
 #include <stdio.h>
 
 int main(int argc, char** argv) {

@@ -1,3 +1,5 @@
+=== REVISÃO: Modos de abertura de um arquivo ===
+
 r = Abre o arquivo em modo de leitura.
 w = Abre o arquivo em modo de escrita, criando um se ele não existir. Se ele existir, a escrita sobrescreve o original.
 a = Abre o arquivo em modo de acrescentar (preserva o conteúdo existente, inserindo dados logo em sequência), criando um se ele não existir.

@@ -1,4 +1,4 @@
-// lines: conta quantas linhas um arquivo de texto tem
+// lines.c: conta quantas linhas um arquivo de texto tem
 #include <stdio.h>
 
 int main(int argc, char** argv) {
@@ -17,7 +17,9 @@ int main(int argc, char** argv) {
     }
 
     c = fgetc(entrada);
-    while(c != EOF) {
+    // processo se repete até chegar no estado de EOF
+    while(c != EOF) { // EOF: estado de fim do arquivo
+        // acrescenta 1 ao contador sempre que um caractere de quebra de linha for lido
         if(c == '\n') {
             count++;
         }
