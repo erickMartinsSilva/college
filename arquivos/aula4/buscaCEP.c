@@ -1,3 +1,5 @@
+// buscaCEP.c: programa que utiliza busca binária para procurar um determinado CEP num arquivo de registros de endereço
+
 #include <stdio.h>
 #include <string.h>
 
@@ -36,26 +38,30 @@ int main(int argc, char** argv)
 	}
 
 	fseek(f, 0, SEEK_END);
-	fim = ftell(f) / sizeof(Endereco);
+	fim = ftell(f) / sizeof(Endereco); // fim: último registro de endereço do arquivo
 
-	long int meio = (inicio+fim)/2;
+	long int meio = (inicio+fim)/2; // definição da posição do endereço no meio do arquivo
 	
 	fseek(f, meio * sizeof(Endereco), SEEK_SET);
 	qt = fread(&e,sizeof(Endereco),1,f);
 	while(inicio <= fim) {
 		c++;
 
+		// se o cep buscado for menor que o do meio, buscar na primeira metade do arquivo
 		if(strncmp(argv[1],e.cep, 8) < 0) {
 			fim = meio - 1;
 		}
+		// se o cep buscado for maior que o do meio, buscar na segunda metade do arquivo
 		if(strncmp(argv[1],e.cep, 8) > 0) {
 			inicio = meio + 1;
 		}
+		// se o cep buscado for o do meio, imprimir suas informações
 		if(strncmp(argv[1],e.cep,8) == 0) {
 			printf("%.72s\n%.72s\n%.72s\n%.72s\n%.2s\n%.8s\n\n",e.logradouro,e.bairro,e.cidade,e.uf,e.sigla,e.cep);
 			break;
 		}
 
+		// definição do novo meio do arquivo e endereço lido para a próxima iteração
 		meio = (inicio + fim)/2;
 		fseek(f, meio * sizeof(Endereco), SEEK_SET);
 
