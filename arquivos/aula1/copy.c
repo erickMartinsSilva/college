@@ -1,11 +1,12 @@
-// cria uma cópia do arquivo especificado nos argumentos do comando
+// copy.c: cria uma cópia do arquivo especificado nos argumentos do comando
 // uso: ./copy [ORIGEM] [DESTINO]
 
 #include <stdio.h>
 
+// argc: número de argumentos passados para o programa contando com o próprio programa
+// argv: array de strings contendo cada argumento passado para o programa contando com o próprio programa (argv[0])
 int main(int argc, char** argv) {
-    // estrutura de arquivo para armazenar os arquivos de entrada e saída
-    FILE *entrada, *saida;
+    FILE *entrada, *saida; // FILE: estrutura utilizada para representar arquivos em programas em C
     int c;
 
     if(argc != 3) {
@@ -13,28 +14,35 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    // abre o arquivo de entrada no modo de leitura binária
+    // fopen: função utilizada para abrir um arquivo
+    // argumentos: nome do arquivo, modo de abertura (rb = leitura binária)
     entrada = fopen(argv[1], "rb");
     if(!entrada) {
+        // fprintf: grava texto em um arquivo de stream.
+        // nesse caso, gravando uma mensagem de erro para a saída de erro padrão (stderr)
         fprintf(stderr, "Não foi possível abrir o arquivo para leitura.");
         return 1;
     }
 
-    // abre o arquivo de saída no modo de escrita binária
+    // wb = escrita binária, criando o arquivo caso ele não exista. se ele existir, será sobrescrito
     saida = fopen(argv[2], "wb");
     if(!saida) {
         fprintf(stderr, "Não foi possível abrir o arquivo para escrita.");
         return 1;
     }
 
-    // fgetc com fputc: copia os conteúdos do arquivo de entrada e escreve no de saída, byte por byte
+    // fgetc: obtém um caractere de um arquivo e armazena-o numa variável (nesse caso, c)
+    // argumentos: ponteiro para estrutura FILE
     c = fgetc(entrada);
     while(c != EOF) {
+        // fputc: insere um caractere num arquivo
+        // argumentos: caractere, ponteiro para estrutura FILE
         fputc(c, saida);
         c = fgetc(entrada);
     }
 
-    // fecha os arquivos de entrada e saída
+    // fclose: fecha um arquivo
+    // argumentos: ponteiro para estrutura FILE
     fclose(entrada);
     fclose(saida);
     return 0;

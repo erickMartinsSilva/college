@@ -1,14 +1,13 @@
-// cria uma cópia do arquivo especificado nos argumentos do comando
+// copy2.c: cria uma cópia do arquivo especificado nos argumentos do comando
 // uso: ./copy2 [ORIGEM] [DESTINO]
 
 #include <stdio.h>
 
-#define SIZE 8192
+#define READ_SIZE 8192
 
 int main(int argc, char** argv) {
-    // declaração de estruturas de arquivos para armazenar os arquivos de entrada e saída e de um buffer de 8 bytes
     FILE *entrada, *saida;
-    char buffer[SIZE];
+    char buffer[READ_SIZE];
     int qtd;
 
     if(argc != 3) {
@@ -16,25 +15,27 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    // abre o arquivo de entrada no modo leitura binária
     entrada = fopen(argv[1], "rb");
     if(!entrada) {
         fprintf(stderr, "Não foi possível abrir o arquivo para leitura.");
         return 1;
     }
 
-    // abre o arquivo de saída no modo escrita binária
     saida = fopen(argv[2], "wb");
     if(!saida) {
         fprintf(stderr, "Não foi possível abrir o arquivo para escrita.");
         return 1;
     }
 
-    // fread com fwrite: lê do arquivo de entrada e escreve no de saída em blocos de tamanho do buffer
-    qtd = fread(buffer, sizeof(char), SIZE, entrada);
+    // fread: lê um bloco de tamanho determinado de um arquivo e armazena em uma variável
+    // argumentos: variável que armazenará o bloco (buffer), tamanho do bloco, qtd de blocos, ponteiro para FILE
+    qtd = fread(buffer, sizeof(char), READ_SIZE, entrada);
+    // processo se repete até o fread não conseguir obter mais blocos do arquivo
     while(qtd > 0) {
+        // fwrite: escreve o conteúdo de uma variável num arquivo
+        // argumentos: variável que armazena o bloco (buffer), tamanho do bloco, qtd de blocos, ponteiro para FILE
         fwrite(buffer, sizeof(char), qtd, saida);
-        qtd = fread(buffer, sizeof(char), SIZE, entrada);
+        qtd = fread(buffer, sizeof(char), READ_SIZE, entrada);
     }
 
     fclose(entrada);
