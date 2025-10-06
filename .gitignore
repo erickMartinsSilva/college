@@ -5,5 +5,9 @@
 # documents
 *.pdf
 
-# IDE files
+# data/text files
+*.dat
+*.txt
+
+# IDE/code editor files
 .vscode
