@@ -1,4 +1,4 @@
-<h2 align="center">Estudos - Ciência da Computação</h2>
+<h1 align="center">Estudos - Ciência da Computação</h2>
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=c,cpp,java" alt="Linguagens"/>
