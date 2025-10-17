@@ -1,3 +1,4 @@
+// busca_cep: busca um CEP passado pelo argumento do programa num arquivo de endereços cep.dat com base num índice indice_ceps.dat
 #include <stdio.h>
 #include <string.h>
 #include "endereco.h"
@@ -42,7 +43,7 @@ int main(int argc, char** argv) {
             fim = meio - 1;
         } else {
             achou = 1;
-            fseek(f2, buffer.pos * sizeof(Endereco), SEEK_SET);
+            fseek(f2, buffer.pos * sizeof(Endereco), SEEK_SET); // posiciona o file pointer no registro desejado
             fread(&buffer2, sizeof(Endereco), 1, f2);
             printf("%.72s\n%.72s\n%.72s\n%.72s\n%.2s\n%.8s\n\n",
                 buffer2.logradouro,buffer2.bairro,buffer2.cidade,buffer2.uf,buffer2.sigla,buffer2.cep
