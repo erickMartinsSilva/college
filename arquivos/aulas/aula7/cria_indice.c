@@ -14,7 +14,6 @@ int main() {
     long qtdEnderecos, currentPos;
 
     // cria índice
-    printf("%ld %ld", sizeof(long), sizeof(EnderecoIndice));
     f = fopen("cep.dat", "rb");
     if(!f) {
         fprintf(stderr, "ERRO: Arquivo cep.dat inexistente\n");
