@@ -1,7 +1,7 @@
 #ifndef FERRAMENTA_H
 #define FERRAMENTA_H
 
-#define AMOUNT_ENTRYS 100
+#define AMOUNT_ENTRIES 100
 
 typedef struct _FerramentaData {
     int numero;
