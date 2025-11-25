@@ -1,7 +1,7 @@
 <h1 align="center">Estudos - Ciência da Computação</h2>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,java" alt="Linguagens"/>
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,postgres" alt="Linguagens"/>
   </a>
 </p>
 
@@ -16,5 +16,5 @@
   <li><strong>so</strong>: Disciplina de Sistemas Operacionais, com projetos práticos feitos em C referentes aos sistemas Unix e xv6;</li>
   <li><strong>poo</strong>: Disciplina de Programação Orientada a Objetos em Java, ensinando conceitos fundamentais do paradigma como Herança, Polimorfismo e Encapsulamento;</li>
   <li><strong>arquivos</strong>: Disciplina de Organização e Estruturas de Arquivos, mostrando formas de manipular arquivos utilizando a linguagem C.</li>
-  <li><strong>bd-1</strong>: Disciplina de Projeto de Banco de Dados, utilizando códigos em SQL para criar e manipular bases de dados relacionais.</li>
+  <li><strong>bd-1</strong>: Disciplina de Projeto de Banco de Dados, utilizando códigos em SQL para criar e manipular bases de dados relacionais gerenciadas com PostgreSQL.</li>
 </ul>
