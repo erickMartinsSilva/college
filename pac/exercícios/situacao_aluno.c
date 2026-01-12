@@ -1,13 +1,12 @@
-// O programa determina a situação final do aluno com base na média entre duas provas
-
+// situacao_aluno.c: calcula a média final de um aluno considerando média mínima 7 para aprovação
 #include <stdio.h>
 
 int main()
 {
-    float p1, p2, pf, media;
+    float nota_p1, nota_p2, nota_pf, media;
     printf("Entre com as notas da P1 e P2 do aluno: ");
-    scanf("%f %f", &p1, &p2);
-    media = (p1 + p2) / 2;
+    scanf("%f %f", &nota_p1, &nota_p2);
+    media = (nota_p1 + nota_p2) / 2;
     printf("Media: %.2f\n", media);
     if (media >= 7)
     {
@@ -16,9 +15,9 @@ int main()
     else if (media < 7 && media >= 5)
     {
         printf("Situacao: Prova final\n");
-        printf("Nota da prova final: ");
-        scanf("%f", &pf);
-        if (pf >= 5)
+        printf("Insira a nota da prova final do aluno: ");
+        scanf("%f", &nota_pf);
+        if (nota_pf >= 5)
         {
             printf("Situacao final: Aprovado");
         }
